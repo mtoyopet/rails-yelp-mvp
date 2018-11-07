@@ -1,0 +1,12 @@
+<h1 class=text-center>WELCOME TO YELP</h1>
+<br>
+<div class="container">
+  <h4><%= link_to "Add a restaurant", new_restaurant_path %></h4>
+  <br>
+  <% @restaurants.each do |restaurant| %>
+  <h4><strong><%= link_to restaurant.name, restaurant_path(restaurant) %></strong></h4>
+  <p><strong>address:</strong> <%= restaurant.address %></p>
+  <p><strong>category:</strong> <%= restaurant.category %></p>
+  <br>
+  <% end %>
+</div>
